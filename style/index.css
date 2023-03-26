@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+:root {
+  font-size: 62.5%;
+  --linear-gradient: linear-gradient(210deg, #a3a8f0 2%, #696fdd 98%);
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --hhhhh: #aeb3f3;
+}
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  background-image: url(../images/bg-top.svg);
+  background-color: var(--Very-Light-Grayish-Blue);
+  background-size: 75%;
+  background-position-x: 24rem;
+  background-position-y: -2rem;
+  background-repeat: no-repeat;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+#titlep {
+  width: max-content;
+  font-size: 2.6rem;
+}
+.switchContainer {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+}
+#titlep,
+.switchContainer,
+.cardsContainer {
+  margin: auto;
+}
+
+#titlep,
+.basicCard,
+.masCard {
+  color: var(--Grayish-Blue);
+}
+.switchContainer > p {
+  color: var(--Light-Grayish-Blue);
+}
+.cardsContainer p > span {
+  color: var(--Dark-Grayish-Blue);
+}
+button {
+  background: var(--linear-gradient);
+  border: none;
+  width: 80%;
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+button:hover {
+  background: inherit;
+  color: #696fdd;
+  border: 1px #696fdd solid;
+}
+.bassub,
+.massub,
+.proCard p > span {
+  color: var(--Very-Light-Grayish-Blue);
+}
+
+.proCard {
+  background-color: var(--linear-gradient);
+  background-image: var(--linear-gradient);
+  color: var(--Very-Light-Grayish-Blue);
+}
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle .slider {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+  background-color: var(--linear-gradient);
+  background-image: var(--linear-gradient);
+  border-radius: 2rem;
+  padding: 7.9%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.toggle .slider:before {
+  content: "";
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.toggle input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(2.3rem);
+}
+.toggle .slider:hover {
+  background-color: var(--hhhhh);
+  background-image: var(--hhhhh);
+}
+.prosub {
+  background: var(--Very-Light-Grayish-Blue);
+  color: #696fdd;
+}
+.prosub:hover {
+  background: transparent;
+  color: var(--Very-Light-Grayish-Blue);
+  border: 2px solid #aeb3f3;
+}
+.cardsContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cardsContainer > div {
+  margin-inline: auto;
+  width: 85%;
+  max-width: 37.5rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 4rem 0;
+  gap: 2rem;
+
+  -webkit-box-shadow: 3px 0px 52px -38px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 0px 52px -38px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 0px 52px -38px rgba(0, 0, 0, 0.75);
+}
+hr {
+  width: 80%;
+}
+span {
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-size: 20%;
+    padding-bottom: 70rem;
+  }
+  .cardsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    padding: 0;
+  }
+  .cardsContainer > div {
+    margin-inline: 0rem;
+    height: 44.6rem;
+  }
+  .cardsContainer > .proCard {
+    position: relative;
+    height: 48.6rem;
+    padding-top: 5.7rem;
+  }
+}
